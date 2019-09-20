@@ -42,4 +42,11 @@ public class MsgContent {
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
+
+	@Override
+	public String toString() {
+		return "MsgContent [id=" + id + ", message=" + message + ", title=" + title + ", createDate=" + createDate
+				+ "]";
+	}
+    
 }

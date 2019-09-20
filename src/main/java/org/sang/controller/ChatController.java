@@ -43,9 +43,9 @@ public class ChatController {
     public List<SysMsg> getSysMsg(@RequestParam(value = "page", defaultValue = "1") Integer page, @RequestParam(value = "size", defaultValue = "10") Integer size) {
         List<SysMsg> sysMsg=sysMsgService.getSysMsgByPage(page, size);
         for (SysMsg sysMsg2 : sysMsg) {
-			System.out.println("sysMsg->"+sysMsg2);
+			System.out.println("sysMsg->"+sysMsg2.toString());
 		}
-    	return sysMsgService.getSysMsgByPage(page, size);
+    	return sysMsg;
     }
 
     @RequestMapping(value = "/markread", method = RequestMethod.PUT)
